@@ -1,0 +1,38 @@
+<div class="page">
+
+
+
+
+    <div class="container my-5">
+        <div class="p-5 text-center bg-body-tertiary rounded-3">
+
+            <h1 class="text-body-emphasis">
+                {{ materialFormComponent?.value?.reference }}
+            </h1>
+            <div class="divider-invisible"></div>
+
+            <app-material-form #materialFormComponent
+                               [selectOptions]="selectOptions"
+            ></app-material-form>
+
+            <div class="divider-invisible"></div>
+            <div class="d-inline-flex gap-4 text-center mb-5">
+                <button type="button"
+                        title="Save"
+                        class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill"
+                        role="button"
+                        [appCopyToClipboard]="materialFormComponent?.value?.reference"
+                >
+                    <i class="fa-regular fa-clipboard"></i>&nbsp; + &nbsp;<i class="fa-solid fa-list-ol"></i>
+                </button>
+                <button type="button"
+                        title="Add Field"
+                        class="btn btn-outline-medium btn-lg px-3 rounded-pill"
+                >
+                    +
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>

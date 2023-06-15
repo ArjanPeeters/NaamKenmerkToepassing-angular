@@ -1,23 +1,54 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "sourceMap": true,
-    "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "target": "es2015",
-    "module": "es2020",
-    "lib": [
-      "es2018",
-      "dom"
-    ]
-  },
-  "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false
-  }
+    "compileOnSave": false,
+    "compilerOptions": {
+        "baseUrl": "./",
+        "outDir": "./dist/out-tsc",
+        "sourceMap": true,
+        "declaration": false,
+        "downlevelIteration": true,
+        "experimentalDecorators": true,
+        "moduleResolution": "node",
+        "importHelpers": true,
+        "target": "es2015",
+        "module": "es2020",
+        "lib": [
+            "es2018",
+            "dom"
+        ],
+        "paths": {
+            "@app-components": [
+                "src/app/components/index"
+            ],
+            "@app-components/*": [
+                "src/app/components/*"
+            ],
+            "@app-directives": [
+                "src/app/directives/index"
+            ],
+            "@app-directives/*": [
+                "src/app/directives/*"
+            ],
+            "@app-models": [
+                "src/app/models/index"
+            ],
+            "@app-pages": [
+                "src/app/pages/index"
+            ],
+            "@app-pages/*": [
+                "src/app/pages/*"
+            ],
+            "@app-services": [
+                "src/app/services/index"
+            ],
+            "crypto": [
+                "node_modules/crypto-browserify"
+            ],
+            "stream": [
+                "node_modules/stream-browserify"
+            ]
+        }
+    },
+    "angularCompilerOptions": {
+        "enableI18nLegacyMessageIdFormat": false
+    }
 }

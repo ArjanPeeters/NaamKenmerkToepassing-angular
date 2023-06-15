@@ -1,0 +1,65 @@
+<form *ngIf="selectOptions?.naam?.length" action="">
+    <div class="row">
+
+        <div class="col-md mb-3 mb-md-0">
+            <div class="input-group">
+                <label for="naamDropdown" class="input-group-text border-primary">
+                    Naam
+                </label>
+                <select [(ngModel)]="value.naam"
+                        id="naamDropdown"
+                        name="naam"
+                        class="form-select form-control border-primary"
+                        (ngModelChange)="handleChange()"
+                >
+                    <option *ngFor="let selectOption of selectOptions?.naam"
+                            [ngValue]="selectOption"
+                    >
+                        {{ selectOption.naam }}
+                    </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-md mb-3 mb-md-0">
+            <div class="input-group">
+                <label for="kenmerkDropdown" class="input-group-text border-secondary">
+                    Kenmerk
+                </label>
+                <select [(ngModel)]="value.kenmerk"
+                        id="kenmerkDropdown"
+                        name="kenmerk"
+                        class="form-select form-control border-secondary"
+                        (ngModelChange)="handleChange()"
+                >
+                    <option *ngFor="let selectOption of selectOptions?.kenmerk"
+                            [ngValue]="selectOption"
+                    >
+                        {{ selectOption.kenmerk }}
+                    </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-md">
+            <div class="input-group">
+                <label for="toepassingDropdown" class="input-group-text border-tertiary">
+                    Toepassing
+                </label>
+                <select [(ngModel)]="value.toepassing"
+                        id="toepassingDropdown"
+                        name="toepassing"
+                        class="form-select form-control border-tertiary"
+                        (ngModelChange)="handleChange()"
+                >
+                    <option *ngFor="let selectOption of selectOptions?.toepassing"
+                            [ngValue]="selectOption"
+                    >
+                        {{ selectOption.toepassing }}
+                    </option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+</form>
